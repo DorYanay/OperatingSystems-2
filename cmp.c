@@ -16,7 +16,6 @@ int cmp(const char *filename1, const char *filename2, int verbose, int ignore_ca
 
     int result = 0;
     int char1, char2;
-    int line_number = 1;
 
     while (1)
     {
@@ -42,11 +41,6 @@ int cmp(const char *filename1, const char *filename2, int verbose, int ignore_ca
         if (char1 == EOF)
         {
             break;
-        }
-
-        if (char1 == '\n')
-        {
-            line_number++;
         }
     }
 
