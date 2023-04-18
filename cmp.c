@@ -5,8 +5,8 @@
 
 int cmp(const char *filename1, const char *filename2, int verbose, int ignore_case)
 {
-    FILE *file1 = fopen(filename1, "r");
-    FILE *file2 = fopen(filename2, "r");
+    FILE *file1 = fopen(filename1, "rb");
+    FILE *file2 = fopen(filename2, "rb");
 
     if (file1 == NULL || file2 == NULL)
     {
@@ -34,7 +34,7 @@ int cmp(const char *filename1, const char *filename2, int verbose, int ignore_ca
             result = 1;
             if (verbose)
             {
-                printf("Files are distinct at line %d\n", line_number);
+                printf("Files are distinct\n");
             }
             break;
         }
@@ -65,7 +65,7 @@ int main(int argc, char **argv)
 {
     if (argc < 3 || argc > 5)
     {
-        printf("Usage: cmp <file1> <file2> [-v] [-i]\n");
+        printf("Usage: ./cmp <file1> <file2> [-v] [-i]\n the [-v] and [-i] are optional\n");
         return 1;
     }
 
@@ -86,7 +86,7 @@ int main(int argc, char **argv)
         else
         {
             printf("Invalid flag: %s\n", argv[i]);
-            printf("Usage: cmp <file1> <file2> [-v] [-i]\n");
+            printf("Usage: ./cmp <file1> <file2> [-v] [-i]\n the [-v] and [-i] are optional\n");
             return 1;
         }
     }

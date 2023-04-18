@@ -46,7 +46,7 @@ int main(int argc, char **argv)
 {
     if (argc < 3 || argc > 5)
     {
-        printf("Usage: copy <source_file> <target_file> [-v] [-f]\n");
+        printf("Usage: ./copy <file1> <file2> [-v] [-f]\n the [-v] and [-f] are optional\n");
         return 1;
     }
 
@@ -67,7 +67,7 @@ int main(int argc, char **argv)
         else
         {
             printf("Error: invalid flag.\n");
-            printf("Usage: copy <source_file> <target_file> [-v] [-f]\n");
+            printf("Usage: ./copy <file1> <file2> [-v] [-f]\n the [-v] and [-f] are optional\n");
             return 1;
         }
     }
