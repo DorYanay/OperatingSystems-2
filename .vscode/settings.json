@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "stdlib.h": "c",
+        "system_error": "c",
+        "stdio.h": "c",
+        "string.h": "c",
+        "ctype.h": "c",
+        "dlfcn.h": "c",
+        "unistd.h": "c"
+    }
+}
