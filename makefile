@@ -2,7 +2,7 @@ CC=gcc
 CFLAGS=-Wall -Werror
 
 
-all: cmp copy encode decode stshell
+all: cmp copy encode decode stshell shell
 cmp: cmp.c
 	$(CC) $(CFLAGS) cmp.c -o cmp
 
@@ -23,5 +23,9 @@ libcodecB.so: codecB.c
 
 stshell: stshell.c
 	$(CC) $(CFLAGS) stshell.c -o stshell
+
+shell: shell.c
+	$(CC) $(CFLAGS) shell.c -o shell
+
 clean:
-	rm -f cmp copy encode decode *.o *.so stshell
+	rm -f cmp copy encode decode *.o *.so stshell shell

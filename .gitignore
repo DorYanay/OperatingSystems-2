@@ -2,3 +2,5 @@ task2_v1.1.pdf
 basic_shell.c
 *.o
 *.so
+test.*
+shell.*
