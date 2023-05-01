@@ -2,7 +2,7 @@ CC=gcc
 CFLAGS=-Wall -Werror
 
 
-all: cmp copy encode decode stshell shell
+all: cmp copy encode decode stshell
 cmp: cmp.c
 	$(CC) $(CFLAGS) cmp.c -o cmp
 
