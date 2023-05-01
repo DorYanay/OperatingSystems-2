@@ -19,13 +19,13 @@ void sigint_handler(int sig)
 }
 void get_commands_before_pipe(char **commands, char **cmd_pipe)
 {
-    int pipesCount = 0;
-    while (strcmp(commands[pipesCount], "|"))
+    int pipes_cnt = 0;
+    while (strcmp(commands[pipes_cnt], "|"))
     {
-        cmd_pipe[pipesCount] = commands[pipesCount];
-        pipesCount++;
+        cmd_pipe[pipes_cnt] = commands[pipes_cnt];
+        pipes_cnt++;
     }
-    cmd_pipe[pipesCount] = NULL;
+    cmd_pipe[pipes_cnt] = NULL;
 }
 void get_commands_after_pipe(char **commands, int pipe_index)
 {
@@ -202,7 +202,7 @@ int main()
                         }
 
                         close(fd_pipe[0]);
-                        wait(NULL);
+                        wait(0);
                         j = -1;
                     }
                 }
@@ -213,7 +213,7 @@ int main()
                 return 1;
             }
         }
-        wait(NULL);
+        wait(0);
     }
     return 0;
 }

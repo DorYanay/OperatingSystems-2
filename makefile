@@ -25,4 +25,4 @@ stshell: stshell.c
 	$(CC) $(CFLAGS) stshell.c -o stshell
 
 clean:
-	rm -f cmp copy encode decode *.o *.so stshell shell
+	rm -f cmp copy encode decode *.o *.so stshell
