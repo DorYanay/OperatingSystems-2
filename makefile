@@ -24,8 +24,5 @@ libcodecB.so: codecB.c
 stshell: stshell.c
 	$(CC) $(CFLAGS) stshell.c -o stshell
 
-shell: shell.c
-	$(CC) $(CFLAGS) shell.c -o shell
-
 clean:
 	rm -f cmp copy encode decode *.o *.so stshell shell
